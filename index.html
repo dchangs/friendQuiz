@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friend Quiz</title>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Patrick+Hand" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<header>
+	<h1>Friend Quiz</h1>
+	<br>
+	<h2>How well do you know your friend or partner?</h2>
+	<br>
+	<h3>Directions: First person answers the questions below and click 'Submit Answers' without the second person looking. After submitting answers, the second person will have to answer the same questions about the first person! See how many answers you get right! Then click clear and switch places!</h3>
+</header>
+
+<section id="quizzes">
+	<form id="p1answers" class="animated slideInLeft">
+		<input type="text" id="username" placeholder="What is your name?">
+		<ol>
+			<li>What is your favorite color?<br>
+				<input type="text" id="answer1"></li>
+			<li>What city were your born in?<br>
+				<input type="text" id="answer2"></li>
+			<li>What is your zodiac sign?<br>
+				<input type="text" id="answer3"></li>
+			<li>What is your favorite sport?<br>
+				<input type="text" id="answer4"></li>
+			<li>What is your favorite cuisine?<br>
+				<input type="text" id="answer5"></li>
+			<li>Which city do you want to visit the most?<br>
+				<input type="text" id="answer6"></li>
+			<li>Which animal do you most identify with?<br>
+				<input type="text" id="answer7"></li>
+			<button type="button" onclick="submitAns()">Submit Answers</button>
+			<button>Clear</button>
+			
+		</ol>
+	</form>
+
+	<form id="p2answers" class="hidden">
+		<input type="text" id="username2" placeholder="What is your name?">
+		<ol>
+			<li>What is <span class="user1nameposs"></span> favorite color?<br>
+				<input type="text" id="p2answer1"></li>
+			<li>What city was <span class="user1name"></span> born in?<br>
+				<input type="text" id="p2answer2"></li>
+			<li>What is <span class="user1nameposs"></span> zodiac sign?<br>
+				<input type="text" id="p2answer3"></li>
+			<li>What is <span class="user1nameposs"></span> favorite sport?<br>
+				<input type="text" id="p2answer4"></li>
+			<li>What is <span class="user1nameposs"></span> favorite cuisine?<br>
+				<input type="text" id="p2answer5"></li>
+			<li>Which city does <span class="user1name"></span> want to visit the most?<br>
+				<input type="text" id="p2answer6"></li>
+			<li>Which animal does <span class="user1name"></span> identify most with?<br>
+				<input type="text" id="p2answer7"></li>
+			<button type="button" onclick="getScore()">Results</button>
+		</ol>	
+	</form>
+</section>
+
+<section id="results" class="hidden">
+	<h1>Your Results</h1>
+	<div id="p1results">
+		<h1 id="p1name"></h1>
+		<ol id="p1"></ol>
+	</div>
+	<div id="p2results">
+		<h1 id="p2name"></h1>
+		<ol id="p2"></ol>
+	</div>
+	<br>
+	<p id="score"></p>
+	<button onclick="location.reload()">Start Over</button>
+</section>
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>	
+
+</body>
+</html>
